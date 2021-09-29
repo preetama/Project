@@ -9,7 +9,7 @@ import { Button, CardActionArea, CardActions } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import Link from "@mui/material/Link";
 
-function BoxSx() {
+const HomeScreen = () => {
   const useStyles = makeStyles((theme) => ({
     hero: {
       backgroundImage: `url('/Images/cover1.jpg')`,
@@ -56,10 +56,16 @@ function BoxSx() {
   return (
     <div>
       <Box className={classes.hero}>
-        <Box>React Blog</Box>
+        <Box>
+          <h1>Blog</h1>
+        </Box>
       </Box>
       <container sx={{ maxWidth: "lg" }} className={classes.blogsContainer}>
-        <Typography variant="h4" className={classes.blogTitle} sx={{ mr: 165 }}>
+        <Typography
+          variant="h4"
+          className={classes.blogTitle}
+          sx={{ mt: 3, ml: 3 }}
+        >
           Articles
         </Typography>
       </container>
@@ -69,7 +75,7 @@ function BoxSx() {
           <Grid container direction="column">
             <Grid item>
               <Card sx={{ maxWidth: 345, ml: 3, mt: 3 }}>
-                <CardActionArea>
+                <CardActionArea href="reactdom">
                   <CardMedia
                     component="img"
                     height="140"
@@ -90,7 +96,7 @@ function BoxSx() {
                   </CardContent>
                 </CardActionArea>
                 <CardActions>
-                  <Button size="small" color="primary">
+                  <Button size="small" color="primary" href="reactdom">
                     Learn More
                   </Button>
                 </CardActions>
@@ -103,7 +109,7 @@ function BoxSx() {
           <Grid container direction="column">
             <Grid item>
               <Card sx={{ maxWidth: 345, ml: 3, mt: 3 }}>
-                <CardActionArea>
+                <CardActionArea href="reacthooks">
                   <CardMedia
                     component="img"
                     height="140"
@@ -124,7 +130,7 @@ function BoxSx() {
                   </CardContent>
                 </CardActionArea>
                 <CardActions>
-                  <Button size="small" color="primary" href="hooks">
+                  <Button size="small" color="primary" href="reacthooks">
                     Learn More
                   </Button>
                 </CardActions>
@@ -137,7 +143,7 @@ function BoxSx() {
           <Grid container direction="column">
             <Grid item>
               <Card sx={{ maxWidth: 345, ml: 3, mt: 3 }}>
-                <CardActionArea>
+                <CardActionArea href="javascript">
                   <CardMedia
                     component="img"
                     height="140"
@@ -158,7 +164,7 @@ function BoxSx() {
                   </CardContent>
                 </CardActionArea>
                 <CardActions>
-                  <Button size="small" color="primary">
+                  <Button size="small" color="primary" href="javascript">
                     Learn More
                   </Button>
                 </CardActions>
@@ -171,7 +177,7 @@ function BoxSx() {
           <Grid container direction="column">
             <Grid item>
               <Card sx={{ maxWidth: 345, ml: 3, mt: 3, mr: 3 }}>
-                <CardActionArea>
+                <CardActionArea href="javascriptdom">
                   <CardMedia
                     component="img"
                     height="140"
@@ -192,7 +198,7 @@ function BoxSx() {
                   </CardContent>
                 </CardActionArea>
                 <CardActions>
-                  <Button size="small" color="primary">
+                  <Button size="small" color="primary" href="javascriptdom">
                     Learn More
                   </Button>
                 </CardActions>
@@ -205,7 +211,7 @@ function BoxSx() {
           <Grid container direction="column">
             <Grid item>
               <Card sx={{ maxWidth: 345, ml: 3, mt: 3 }}>
-                <CardActionArea>
+                <CardActionArea href="bom">
                   <CardMedia
                     component="img"
                     height="140"
@@ -227,7 +233,7 @@ function BoxSx() {
                   </CardContent>
                 </CardActionArea>
                 <CardActions>
-                  <Button size="small" color="primary">
+                  <Button size="small" color="primary" href="bom">
                     Learn More
                   </Button>
                 </CardActions>
@@ -240,7 +246,7 @@ function BoxSx() {
           <Grid container direction="column">
             <Grid item>
               <Card sx={{ maxWidth: 345, ml: 3, mt: 3 }}>
-                <CardActionArea>
+                <CardActionArea href="html">
                   <CardMedia
                     component="img"
                     height="140"
@@ -261,7 +267,7 @@ function BoxSx() {
                   </CardContent>
                 </CardActionArea>
                 <CardActions>
-                  <Button size="small" color="primary">
+                  <Button size="small" color="primary" href="html">
                     Learn More
                   </Button>
                 </CardActions>
@@ -274,7 +280,7 @@ function BoxSx() {
           <Grid container direction="column">
             <Grid item>
               <Card sx={{ maxWidth: 345, ml: 3, mt: 3, mb: 3 }}>
-                <CardActionArea>
+                <CardActionArea href="css">
                   <CardMedia
                     component="img"
                     height="140"
@@ -295,8 +301,8 @@ function BoxSx() {
                   </CardContent>
                 </CardActionArea>
                 <CardActions>
-                  <Button size="small" color="primary">
-                    Share
+                  <Button size="small" color="primary" href="css">
+                    Learn More
                   </Button>
                 </CardActions>
               </Card>
@@ -307,6 +313,6 @@ function BoxSx() {
       <Copyright sx={{ mt: 8, mb: 4 }} />
     </div>
   );
-}
+};
 
-export default BoxSx;
+export default HomeScreen;
